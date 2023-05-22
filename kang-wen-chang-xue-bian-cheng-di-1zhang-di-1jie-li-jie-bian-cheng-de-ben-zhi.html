@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="ilya Yao" />
+<meta name="description" content="Tags: programming basics Slug: Understand-the-essence-of-programming Authors: Logic Summary: 本期前7分钟由浅入深讲了编程的本质，后面用数据和函数抽象了真实的世界，这是我近几年最宝贵的认知，推荐大家能看完后半段 …" />
+<meta name="keywords" content="">
+
+
+  <meta property="og:site_name" content="liang"/>
+  <meta property="og:title" content="康文昌學編程，第1章第1节，理解编程的本质。"/>
+  <meta property="og:description" content="Tags: programming basics Slug: Understand-the-essence-of-programming Authors: Logic Summary: 本期前7分钟由浅入深讲了编程的本质，后面用数据和函数抽象了真实的世界，这是我近几年最宝贵的认知，推荐大家能看完后半段 …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="/kang-wen-chang-xue-bian-cheng-di-1zhang-di-1jie-li-jie-bian-cheng-de-ben-zhi.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2023-05-20 10:30:00+02:00"/>
+  <meta property="article:modified_time" content="2023-05-20 19:30:00+02:00"/>
+  <meta property="article:author" content="/author/ilya-yao.html">
+  <meta property="article:section" content="康文昌學編程"/>
+  <meta property="og:image" content="">
+
+  <title>liang &ndash; 康文昌學編程，第1章第1节，理解编程的本质。</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="/">
+      <img src="/theme/img/profile.png" alt="" title="">
+    </a>
+
+    <h1>
+      <a href="/"></a>
+    </h1>
+
+
+
+    <nav>
+      <ul class="list">
+
+
+
+          <li>
+            <a target="_self" href="https://getpelican.com/" >Pelican</a>
+          </li>
+          <li>
+            <a target="_self" href="https://www.python.org/" >Python.org</a>
+          </li>
+          <li>
+            <a target="_self" href="https://palletsprojects.com/p/jinja/" >Jinja2</a>
+          </li>
+          <li>
+            <a target="_self" href="#" >You can modify those links in your config file</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-You can add links in your config file"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-You can add links in your config file"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-Another social link"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-Another social link"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="kang-wen-chang-xue-bian-cheng-di-1zhang-di-1jie-li-jie-bian-cheng-de-ben-zhi">康文昌學編程，第1章第1节，理解编程的本质。</h1>
+    <p>
+      Posted on 周六 20 五月 2023 in <a href="/category/kang-wen-chang-xue-bian-cheng.html">康文昌學編程</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Tags: programming basics</h1>
+<h1>Slug: Understand-the-essence-of-programming</h1>
+<p>Authors: Logic
+Summary: 本期前7分钟由浅入深讲了编程的本质，后面用数据和函数抽象了真实的世界，这是我近几年最宝贵的认知，推荐大家能看完后半段。本期加后面6期一共48分钟，已经有几百个零基础同学上线了自己的个人网站，具体可以去围观第七节的评论区，你也完全可以来试试，给自己多一份可能。
+lang: zh</p>
+<hr>
+<h1>點擊觀看視頻</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ynlUeaSqncY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- @[youtube](ynlUeaSqncY) -->
+
+<h1>課程思維導圖</h1>
+<!-- ![第1章第1节，理解编程的本质]({static}/a.png) -->
+<!-- [toc] -->
+<h1>十分鐘學會編程的本質，零基礎入門學編程</h1>
+<h2>目录</h2>
+<ul>
+<li><a href="#1">什麼是編程</a></li>
+<li>什麼是函數<ul>
+<li><a href="#2">函數的原理</a></li>
+<li><a href="#3">函數的判斷</a></li>
+<li><a href="#4">函數調用函數</a></li>
+<li><a href="#5">函數的實際應用</a></li>
+</ul>
+</li>
+<li><a href="#6">真實世界和程序</a></li>
+<li><a href="#title7">總結</a> </li>
+</ul>
+<h2><span id ='1'>什麼是編程</span></h2>
+<p>所谓编程就是编写程序，编写很简单就是写代码，你可以用記事本可以用word。当然为了更方便，我们一般会用专门的软件来编写，保存代码内容为一个有特定后缀的文件
+就完成了编写，OK编写已经理解了，我们去掉它。
+而程序泛指任何网站，软件，脚本，系统之类的东西。但不管是什么，程序只有两个部分：数据和函数，你只要明白了数据和函数这两个概念，那么学会编程就没有任何难度。
+数据其本质很简单，就是保存在内存条或者硬盘上的电子而已，0和1的不断排列，组成了你现在看到的视频画面，点赞数量等。</p>
+<h2><span id ='2'>什麼是函數</span></h2>
+<p>其实函数也很简单，就是一个接收输入参数处理功能，输出结果的一个过程。也可以理解为：听到呼唤处理事情，回应结果，这种我们人类的逻辑。我们呼唤这个函数的动作
+叫：调运。就是调钱过来使用，让函数运行一次的意思。举个例子，首先我们看一个最简单的函数：加法。加法函数接收两个输入参数：第一个数字和第二个数字，它的处理
+功能就是把两个数字相加，最后输出结果。我们来调运一下这个加法函数：给它两个参数：1和2。它内部会执行一个加法的运算：1加2等于3，然后输出结果3，完事了！
+函数就是这么简单！一年级以上的同学应该都能听明白吧。但就是这么简单的东西，我们就像一般人一开始就教上来就教各种编程框架、语言原理、打印字符等。就像不教拼音
+汉字就直接教作文一样，部分人倒是可以啃下来，但更多人被挡在了门外，属实可惜。</p>
+<h2><span id ='3'>函數的判斷</span></h2>
+<p>有人肯定会说：啊！这算什么编程？别急！我们慢慢升级，好！第一关的boss我们打倒了，进入第二关：函数内部的处理过程中有好几个常用的方法，最重要的一个就是判断
+判断什么呢？比如说我们给加法这个函数升级一下，里面加点判断的代码，那么它里面就开始判断，这个调用咱们的时候是不是有两个参数给我们呢？一个数字当然做不了加法对吧 
+那么我们判断到如果没有两个参数进来，那我们就大喊一声调用错了。输出一个错误信息，这就叫程序报错。同样的道理，它也可以判断你这个参数是不是数字。如果别人传进来的
+是文字，那肯定也不能加法呀！就报错！这个就是编程的核心。函数的计算过程很简单，计算的过程加减乘除之类的。我们叫它运算符号判断啥的就叫控制结构，就是控制这个计算
+的过程我们后面学的无非就是再多学几个运算符号，再多学几个控制结构而已。但本质就是这样没有太多难的了。</p>
+<h2><span id ='4'>函數調用函數</span></h2>
+<p>好，第二关的boss我们搞定了。进入第三关，在函数内也可以调用其他函数不断的套娃下去。举个简单的例子，我们来写一个乘法函数，它接收两个参数比如说我们现在调用它传入
+二和三，就是想让它计算一下二乘三等于多少。按理来说用乘号就行，但这里我们展示用它调用加法，乘法的本质是什么？就是几个相同的数字相加。这里就是三个二相加。这时候
+就不用再写个加法函数，直接调用前面写好的就可以。首先我们创建一个数据名字叫结果初始值为零，然后我们创建一个循环，看第二个参数是几，就循环几次。循环的内部就是将
+结果的值，改为调用了加法函数返回的结果。此时调用加法函数的参数就是最新的结果的值和乘法的第一个参数，开始循环0加2，2加2，4加2循环结束这时候结果的值是6返回结果
+的值，函数的调用就是这样，一般来说一个软件只會有一个主函数。然后所有的功能都不断的在里面套娃互相调用，就形成了各种各样我们能够使用的功能，那么就有人会说你这个
+加减乘除有什么用？哎，那你看到你手机或电脑屏幕上的点赞按钮没有点一下，有没有加1这是不是一个加法函数呢！哦，对，你们可别再点一次给我整成减法了。</p>
+<h2><span id ='5'>函數的實際應用</span></h2>
+<p>那我们现在进入第四关看一下这个点赞函数又是怎么实现的，点赞函数的本质很简单，当你点击点赞按钮的时候就触发调用了它，它接收一个参数就是视频的ID，ID就是类似身份证号
+或者你家的地址一样，就是可以唯一确定一条数据位置或归属的信息，就是说软件的公司，它有一个很大的数据库里面有很多数据。你一个一个从头到尾找到这个视频的信息肯定很慢。
+但是知道这个视频的ID后就等于知道了它的地址，直接跑过去到指定位置就能找到了。好开始计算，函数内部会先调用数据库函数，通过视频ID查询到这个视频的点赞数量数据。然后
+给它加1并再次从入数据库，把加法后的值输出返回，再调用软件的界面图形函数渲染点赞数字为返回结果就行了。最简单的流程就是这样。大家理解了吗？当然真实世界的点赞函数
+还是会多一点细节，比如说记录你个人信息，比如说取消点赞的功能，还有由于安全性的问题。操作数据库的这部分函数会放在远程的服务器上，函数和函数之间的调用就会再加一层
+网络通信函数,还有各种各样的函数,比如说给我发送一条消息提醒,有人给我点赞了,让我开心一下,或者是用数据和函数判断你对我的视频感兴趣。下次我再更新的时候就会再推荐给你
+等等，我们以后写代码去完成各种各样的功能。或简单或复杂，但万变不离其宗，所有的程序软件功能等等，无非就是这样。数据和函数，如果你看懂了，那我可以说你已经学会编程
+的本质了。剩下的无非就是熟悉熟悉语言。工具框架啥的没啥难的了。第四关我们搞定了。</p>
+<h2><span id ='6'>真實世界和程序</span></h2>
+<p>接下来我们进入第五关，真实程序。我们的宇宙其实也非常简单，我们只需要几个数据和函数，基本粒子通过不同的力，互相结合形成了元素周期表。进而形成了我们现在的世界。所以，
+我们完全可以把宇宙当做一个超大的程序，抽象为数据和函数的组合。元素周期表中的元素数据通过很多力函数，结合成了无机物，比如说氧气水等等。然后无机物又通过一系列复杂的
+函数，结合成了有机物，比如蛋白质糖脂肪等。而这些有机物又通过一系列复杂的函数，结合成了细胞和生物，从单细胞到多细胞。从动物到人类都是如，就是因为构成我们人类的基本
+物质大概有60多个，它们结合成的有机物大多以碳元素为基础。宇宙和人体的物质和力就是这么简单，只不过它们的数据非常庞大，互相结合的函数非常复杂吧。那么进一步延伸，我们
+的意识其实也可以看作是一个复杂的程序，我们的数据也就是记忆。储存在神经元突触上。我们的函数也就是思维，运行在神经元上，我们大脑中几百一个神经元的复杂结合，就会形成
+我们所谓意识这样一个程序，但是通过学习函数可以把做饭的流程知识点等东西。保存在神经突触中，对做饭的理解生成为新的神经元，下次做饭的时候不用重新学习，调用它就可以了，
+历史上有很多脑科学实验感兴趣的同学可以自行搜索了解一下。这里我就不展开了，以后在我的通识课中我们再来详细了解人类，当然了我们的身体实在是太复杂了，里面的记忆和神经
+函数各种各样。每个人都不同，甚至还有很多人的处理逻辑是判断我在瞎编这都没有关系。人类的函数和记忆来自于遗传，从小到大的成长经历，学习环境，学到的知识和思维逻辑等等
+方式方法和过程都不一样，那么形成的人也就不一样，从这个角度来说。如果一个人想要在生活中获得更多正确的判断和决策，那么就要尽可能提升自己的数据和函数。数据小，那么，
+函数处理的依据就少，函数少，那么处理的方式就少。而学习一方面能够增加我们的知识提升数据量，另一方面能够增加我们的思维方式增加并优化函数，一个不断学习的人能够将自己
+的版本持续升级，成为一个在别人看来优秀的人，一个不学习的人，你会发现在很多年后，他还是一个老版本的样子。学习的方式多种多样。看书的看视频的通过实践获得经验的多沟通
+交流的都是，我希望能够看到这个视频的同学能够深刻理解我的这段思考。从而能成为一个不断迭代自己版本，不断升级自己的优秀人类，大家是不是觉得跨度有点大，我明明是来学编
+程的怎么就扯到宇宙和生命上，其实啊我设计的编程课不仅仅是想教大家学会编程。更重要的是教会大家学会抽象思维，学会用数据和函数的思维模型去看待事物，这样才能在根本上去
+理解编程理解学习理解世界理解我们自己。这是我R10系列的唯一一节理论课，因为编程就是这么简单，我相信完整看完的大家已经学会了编程的本质。后面就都是实际应用了。</p>
+<h2><span id ='title7'>總結</span></h2>
+<p>总结一下，
+第一，就告诉了大家一个概念：程序的本质就是数据和函数编程就是编写不同函数处理数据。
+第二，对于函数我们过五关斩头将 第一关认识了加法函数 第二关知道了函数的计算过程
+第三，关了解了函数的互相调应 
+第四，模拟了点赞函数的过程
+第五，用函数和数据模型抽象了正常的函数
+第六，了解了函数的几乎相同的函数 
+第七，了解了函数的互相调应 
+第八，关模拟了点赞函数的过程 
+第九，关用函数和数据模型抽象了真实世界
+第十，我们重新认识了自己，祝愿大家都能持续升级，有一个更好的人生</p>
+<p>在最后布置一下本节课也是大家的第一份作业，找一个生活中的事人，把他用函数的方式写出来。简单的可以写一个函数，复杂的可以写几个几十个，提交到评论区即可。下期一个有手就行的
+第一行代码。明天见！</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " liang ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+</body>
+</html>

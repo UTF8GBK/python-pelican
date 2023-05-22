@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="ilya Yao" />
+<meta name="description" content="附加静态文件 目录 官网 …" />
+<meta name="keywords" content="Pelican">
+
+
+  <meta property="og:site_name" content="liang"/>
+  <meta property="og:title" content="pelican 下载文件链接"/>
+  <meta property="og:description" content="附加静态文件 目录 官网 …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="/python-pelican-to-down.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2012-12-01 10:02:00+01:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="/author/ilya-yao.html">
+  <meta property="article:section" content="Pelican"/>
+  <meta property="article:tag" content="Pelican"/>
+  <meta property="og:image" content="">
+
+  <title>liang &ndash; pelican 下载文件链接</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="/">
+      <img src="/theme/img/profile.png" alt="" title="">
+    </a>
+
+    <h1>
+      <a href="/"></a>
+    </h1>
+
+
+
+    <nav>
+      <ul class="list">
+
+
+
+          <li>
+            <a target="_self" href="https://getpelican.com/" >Pelican</a>
+          </li>
+          <li>
+            <a target="_self" href="https://www.python.org/" >Python.org</a>
+          </li>
+          <li>
+            <a target="_self" href="https://palletsprojects.com/p/jinja/" >Jinja2</a>
+          </li>
+          <li>
+            <a target="_self" href="#" >You can modify those links in your config file</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-You can add links in your config file"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-You can add links in your config file"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-Another social link"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-Another social link"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="python-pelican-to-down">pelican 下载文件链接</h1>
+    <p>
+      Posted on 周六 01 十二月 2012 in <a href="/category/pelican.html">Pelican</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>附加静态文件</h1>
+<h2>目录</h2>
+<ul>
+<li><a href="#1">官网讲解：附加静态文件</a></li>
+</ul>
+<h2><span id='1'>官网讲解：附加静态文件</span></h2>
+<p>从 Pelican 版本 3.5 开始，静态文件可以通过以下语法“附加”到页面或文章中，使用如下链接目标：</p>
+<div class="highlight"><pre><span></span><code>    {attach}path/to/file{static}
+</code></pre></div>
+
+<p>整体目录如下：</p>
+<div class="highlight"><pre><span></span><code><span class="n">content</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">blog</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">icons</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">icon</span><span class="o">.</span><span class="n">png</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">photo</span><span class="o">.</span><span class="n">jpg</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">testpost</span><span class="o">.</span><span class="n">md</span>
+<span class="err">└──</span><span class="w"> </span><span class="n">downloads</span>
+<span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">archive</span><span class="o">.</span><span class="n">zip</span>
+</code></pre></div>
+
+<p><code>pelicanconf.py</code> 将包括：</p>
+<div class="highlight"><pre><span></span><code>PATH = &#39;content&#39;
+ARTICLE_PATHS = [&#39;blog&#39;]
+ARTICLE_SAVE_AS = &#39;{date:%Y}/{slug}.html&#39;
+ARTICLE_URL = &#39;{date:%Y}/{slug}.html&#39;
+</code></pre></div>
+
+<p><code>testpost.md</code> 将包括：</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Title</span><span class="p">:</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="n">Post</span>
+<span class="nl">Category</span><span class="p">:</span><span class="w"> </span><span class="n">test</span>
+<span class="nl">Date</span><span class="p">:</span><span class="w"> </span><span class="mi">2014-10-31</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Icon</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">icons</span><span class="o">/</span><span class="n">icon</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+<span class="o">!</span><span class="p">[</span><span class="n">Photo</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">photo</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+<span class="p">[</span><span class="n">Downloadable</span><span class="w"> </span><span class="n">File</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">archive</span><span class="p">.</span><span class="n">zip</span><span class="p">)</span>
+</code></pre></div>
+
+<p>------------------&gt;<a href="/archive.zip">点击这里即可下载小电影</a></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/pelican.html">Pelican</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " liang ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+</body>
+</html>

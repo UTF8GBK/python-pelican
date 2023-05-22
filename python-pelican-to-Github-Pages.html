@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="ilya Yao" />
+<meta name="description" content="How to use python-pelican and Github pages to complete static …" />
+<meta name="keywords" content="pelican, Github">
+
+
+  <meta property="og:site_name" content="liang"/>
+  <meta property="og:title" content="python-pelican to Github Pages"/>
+  <meta property="og:description" content="How to use python-pelican and Github pages to complete static …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="/python-pelican-to-Github-Pages.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2023-05-19 00:20:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="/author/ilya-yao.html">
+  <meta property="article:section" content="Python,Github"/>
+  <meta property="article:tag" content="pelican"/>
+  <meta property="article:tag" content="Github"/>
+  <meta property="og:image" content="">
+
+  <title>liang &ndash; python-pelican to Github Pages</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="/">
+      <img src="/theme/img/profile.png" alt="" title="">
+    </a>
+
+    <h1>
+      <a href="/"></a>
+    </h1>
+
+
+
+    <nav>
+      <ul class="list">
+
+
+
+          <li>
+            <a target="_self" href="https://getpelican.com/" >Pelican</a>
+          </li>
+          <li>
+            <a target="_self" href="https://www.python.org/" >Python.org</a>
+          </li>
+          <li>
+            <a target="_self" href="https://palletsprojects.com/p/jinja/" >Jinja2</a>
+          </li>
+          <li>
+            <a target="_self" href="#" >You can modify those links in your config file</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-You can add links in your config file"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-You can add links in your config file"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-Another social link"
+           href="#"
+           target="_blank">
+          <i class="fa-brands fa-Another social link"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="python-pelican-to-Github-Pages">python-pelican to Github Pages</h1>
+    <p>
+      Posted on 周五 19 五月 2023 in <a href="/category/pythongithub.html">Python,Github</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>How to use python-pelican and Github pages to complete static website deployment</h1>
+<h1>实现静态网页的框架搭建与部署</h1>
+<h2>目录</h2>
+<ul>
+<li><a href="#1">快速上手</a><ul>
+<li><a href="#2">1、克隆仓库</a></li>
+<li><a href="#3">2、创建Python虚拟环境</a><ul>
+<li><a href="#4">Linux and Mac</a></li>
+<li><a href="#5">Windows</a></li>
+</ul>
+</li>
+<li><a href="#6">3、配置 pelican</a></li>
+</ul>
+</li>
+</ul>
+<h2><span id='1'>快速上手</span></h2>
+<h3>创建您的GitHub仓库</h3>
+<p><img alt="New_repository" src="/images/New_repository.png"></p>
+<h3><span id='2'>1、克隆仓库</span></h3>
+<div class="highlight"><pre><span></span><code>    git clone https://github.com/your-username/your-repository.git
+</code></pre></div>
+
+<h3><span id='3'> 2、创建Python虚拟环境</span></h3>
+<h4><span id='4'> Linux and Mac</span></h4>
+<ul>
+<li>进入项目：<code>cd &lt;项目&gt;</code></li>
+<li>创建虚拟环境：<code>python3 -m venv pelican_venv</code> </li>
+<li>激活虚拟环境：<code>source pelican_venv/bin/activate</code> </li>
+</ul>
+<h4><span id='5'>Windows</span></h4>
+<ul>
+<li>打开命令提示符（Windows键+R，然后输入cmd，按Enter）或者 Powershell。</li>
+<li>安装 virtualenv：<code>pip install virtualenv</code></li>
+<li>创建 Python 虚拟环境: <code>virtualenv -p C:/Python311/python.exe py36env</code></li>
+<li>激活虚拟环境：<code>cd py36env/Scripts</code> , <code>activate</code></li>
+</ul>
+<h3><span id='6'>3、配置 pelican</span></h3>
+<ul>
+<li>安装 pelican <code>pip install "pelican[markdown]"</code></li>
+<li>
+<p>生成 pelican <code>pelican-quickstart</code>
+    配置如下：</p>
+<ul>
+<li>
+<blockquote>
+<p>Where do you want to create your new web site? [.]  【网站路径，默认即可】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>What will be the title of this web site? 随意写【网站名称】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Who will be the author of this web site? 【作者】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>What will be the default language of this web site? [en] 【语言】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to specify a URL prefix? e.g., https://example.com   (Y/n) n</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to enable article pagination? (Y/n) n 【启用文章分页】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>What is your time zone? [Europe/Rome]  【默认】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to generate a tasks.py/Makefile to automate generation and publishing? (Y/n) y 【生成一个tasks.py/Makefile来自动生成和发布】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using FTP? (y/N) n 【使用 FTP 上传你的网站】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using SSH? (y/N) n 【 SSH 上传你的网站】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using Dropbox? (y/N) n 【使用 Dropbox 上传你的网站】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using S3? (y/N) n  【使用 S3 上传你的网站】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using Rackspace Cloud Files? (y/N) n 【使用 Rackspace Cloud Files 上传你的网站】</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Do you want to upload your website using GitHub Pages? (y/N) n 【使用 Github pages 上传你的网站】</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>启动 pelican：</p>
+<ul>
+<li>在启动之前先在content创建一个images的图片</li>
+<li>在content 创建第一篇md文章</li>
+<li>在根目录运行 pelican content</li>
+<li>查看运行记录 pelican -l
+本地会生成一个http://127.0.0.1:8000 ，打开即可获取您的网站
+<img alt="本地部署" src="/images/web_site.png"></li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/pelican.html">pelican</a>
+      <a href="/tag/github.html">Github</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " liang ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+</body>
+</html>
